@@ -1,0 +1,18 @@
+export const Colors = {
+    primary: '#4CBEE6',
+    darkPrimary: '#3a95b6',
+    lightPrimary: '#70CBEC',
+    seeker: '#A1CE57',
+    darkSeeker: '#82A845',
+    lightSeeker: '#b4d879',
+    opp: '#F89E4C',
+    darkOpp: '#BC793C',
+    lightOpp: '#f9b170',
+    filterColor: '#8E8E93',
+    white: '#FFFFFF',
+    black: '#000000',
+    locationModal: '#808080',
+    errorColor: '#E76055',
+    modalButton: '#C5C5C5',
+    footerIcon: '#C4C4C4',
+};

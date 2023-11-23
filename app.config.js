@@ -1,6 +1,5 @@
 import 'dotenv/config';
 
-
 export default{
   "expo": {
     "name": "capstoneproject",
@@ -18,19 +17,23 @@ export default{
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      bundleIdentifier: "com.capstoneapp.app",
+      "supportsTablet": true,
+      // googleServicesFile: "./GoogleService-Info.plist"
     },
     "android": {
+      "package": "com.capstoneapp.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     extra: {
-      
+
         apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
         authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
         projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
@@ -38,7 +41,8 @@ export default{
         messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
         appId: process.env.REACT_APP_FIREBASE_APP_ID,
         measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
-      
-    }
+
+    },
+    "plugins": ["@react-native-google-signin/google-signin"]
   }
 }

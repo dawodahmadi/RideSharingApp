@@ -1,0 +1,21 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project /Users/mac/Documents/TaxiApp/RideSharingApp/ios/capstoneproject.xcodeproj -configuration Debug -scheme capstoneproject -destination id=2FB6B972-F093-499E-8972-B293BC35A47F
+
+User defaults from command line:
+    IDEPackageSupportUseBuiltinSCM = YES
+
+Prepare packages
+
+Computing target dependency graph and provisioning inputs
+
+Create build description
+Build description signature: 5198d9068bf75b7f0f61b8c4817258c2
+Build description path: /Users/mac/Library/Developer/Xcode/DerivedData/capstoneproject-abbggpozkaerwudzuxdlxptvarly/Build/Intermediates.noindex/XCBuildData/5198d9068bf75b7f0f61b8c4817258c2-desc.xcbuild
+
+note: Building targets in dependency order
+/Users/mac/Documents/TaxiApp/RideSharingApp/ios/Pods/Target Support Files/Pods-capstoneproject/Pods-capstoneproject.debug.xcconfig:1:1: error: unable to open configuration settings file
+/Users/mac/Documents/TaxiApp/RideSharingApp/ios/Pods/Target Support Files/Pods-capstoneproject/Pods-capstoneproject.debug.xcconfig:1:1: error: unable to open configuration settings file
+/Users/mac/Documents/TaxiApp/RideSharingApp/ios/Pods/Target Support Files/Pods-capstoneproject/Pods-capstoneproject.debug.xcconfig:1:1: error: unable to open configuration settings file
+/Users/mac/Documents/TaxiApp/RideSharingApp/ios/Pods/Target Support Files/Pods-capstoneproject/Pods-capstoneproject.debug.xcconfig:1:1: error: unable to open configuration settings file
+warning: Run script build phase 'Start Packager' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'capstoneproject' from project 'capstoneproject')
+warning: Run script build phase 'Bundle React Native code and images' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'capstoneproject' from project 'capstoneproject')
