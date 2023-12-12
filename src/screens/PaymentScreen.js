@@ -26,7 +26,11 @@ const PaymentScreen = ({navigation}) => {
         email: '',
         amount:'',
     })
-
+    const [signUpParamsValidate, setSignUpParamsValidate] = useState({
+       name:false,
+        email: '',
+        amount: '',
+    })
     const emailValidationSchema = yup.object().shape({
         email: yup
             .string()
@@ -45,11 +49,19 @@ const PaymentScreen = ({navigation}) => {
                             ...previous,
                             name: 'red'
                         }))
+                        setSignUpParamsValidate(previous => ({
+                            ...previous,
+                            name: false,
+                        }))
                         return false;
                     }
                     setOutLineColor(previous => ({
                         ...previous,
                         name: '#007CCF'
+                    }))
+                    setSignUpParamsValidate(previous => ({
+                        ...previous,
+                        name: true,
                     }))
                     return true;
                 },
@@ -75,11 +87,19 @@ const PaymentScreen = ({navigation}) => {
                     ...previous,
                     emailColor: valid ? '#007CCF':'red'
                 }))
+                setSignUpParamsValidate(previous => ({
+                    ...previous,
+                    email: valid ? true : false,
+                }))
             })
             .catch(() => {
                 setOutLineColor(previous => ({
                     ...previous,
                     emailColor: 'red'
+                }))
+                setSignUpParamsValidate(previous => ({
+                    ...previous,
+                    email: false,
                 }))
             });
     }
@@ -96,11 +116,19 @@ const PaymentScreen = ({navigation}) => {
                     ...previous,
                     amount: '#007CCF'
                 }))
+                setSignUpParamsValidate(previous => ({
+                    ...previous,
+                    amount:true,
+                }))
             })
             .catch(() => {
                 setOutLineColor(previous => ({
                     ...previous,
                     amount: 'red'
+                }))
+                setSignUpParamsValidate(previous => ({
+                    ...previous,
+                    amount:false,
                 }))
             });
     }
@@ -147,7 +175,7 @@ const PaymentScreen = ({navigation}) => {
             <Header
                 isBackArrow={true}
                 isShowText={true}
-                headerText={'Ride Share'}
+                headerText={'Montride Taxi'}
                 styleText={{fontSize:RFValue(20),color:Colors?.primary,fontWeight:'bold'}}
                 backGroundColor={Colors?.white}
                 onBackPress={goBackHandler}
@@ -292,7 +320,7 @@ const PaymentScreen = ({navigation}) => {
                         }}
 
                         cardStyle={{
-                            backgroundColor: Colors?.primary,
+                            backgroundColor: 'red',
                             textColor: Colors?.white,
                         }}
                         style={{
@@ -317,7 +345,7 @@ const PaymentScreen = ({navigation}) => {
                         styleText={styles.buttonText}
                         buttonText={'Done'}
                         buttonIconValue={true}
-                        buttonDisable={!cardInfo}
+                        buttonDisable={!cardInfo || !signUpParamsValidate?.name || !signUpParamsValidate?.email || !signUpParamsValidate?.amount}
                         onPressHandler={onDone}
                         isLoading={isLoading}
                     />
