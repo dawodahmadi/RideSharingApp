@@ -15,7 +15,7 @@ const Header = ({
                           headerText,
                     isShowRight,
                     onLogout,
-
+                    color,
                       }) => {
     debugger;
     return (
@@ -31,7 +31,7 @@ const Header = ({
                     <TouchableOpacity
                         style={styles.leftIconView}
                         onPress={() => onBackPress()}>
-                        <BackIcon />
+                        <BackIcon color={color} />
                     </TouchableOpacity>
                 ) : (
                     <View style={{marginLeft: '8%'}} />

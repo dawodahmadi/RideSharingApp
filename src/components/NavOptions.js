@@ -16,7 +16,7 @@ const data = [
     id: '456',
     title: 'Order food',
     image: 'https://links.papareact.com/28w',
-    screen: 'EatsScreen',
+    screen: 'PaymentScreen',
   },
 ]
 
@@ -36,7 +36,7 @@ const NavOptions = () => {
                 />
                 <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
                 <Icon name="arrowright" color="white" type="antdesign" />
-                
+
             </View>
             </TouchableOpacity>
         )}

@@ -9,6 +9,7 @@ import MapScreen from "../screens/MapScreen";
 import {createStackNavigator} from "@react-navigation/stack";
 import GmailSignInScreen from "../screens/GmailSignInScreen";
 import UserDetailScreen from "../screens/UserDetailScreen";
+import PaymentScreen from "../screens/PaymentScreen";
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ const StackNavigator=()=>{
                     <Stack.Screen name="UserDetailScreen" component={UserDetailScreen} options={{ headerShown: false}} />
                     <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false}} />
                     <Stack.Screen name="MapScreen" component={MapScreen} options={{ headerShown: false}} />
+                    <Stack.Screen name="PaymentScreen" component={PaymentScreen} options={{ headerShown: false}} />
                 </Stack.Navigator>
             </SafeAreaProvider>
         </NavigationContainer>

@@ -65,11 +65,11 @@ const HomeScreen = ({navigation}) => {
              }} />
              <NavOptions />
       </View>
-        {
-            modalVisible ?
-                <LogoutModal Modal={Modal} modalVisible={modalVisible} setModalVisible={setModalVisible} onCancelPress={onCancelPress} onLogoutPress={onLogoutPress} />
-                :null
-        }
+        {/*{*/}
+        {/*    modalVisible ?*/}
+        {/*        <LogoutModal Modal={Modal} modalVisible={modalVisible} setModalVisible={setModalVisible} onCancelPress={onCancelPress} onLogoutPress={onLogoutPress} />*/}
+        {/*        :null*/}
+        {/*}*/}
     </View>
   );
 };

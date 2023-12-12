@@ -49,7 +49,7 @@ const LoginScreen = () => {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
       console.log('userInfo',userInfo)
-      const jsonValue = JSON.stringify(userInfo);
+      const jsonValue = JSON.stringify(userInfo?.user);
       await AsyncStorage.setItem('loginData', jsonValue);
       navigation.navigate('UserDetailScreen')
       // setState({ userInfo });
